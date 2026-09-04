@@ -9,7 +9,7 @@ def create_app():
     app = Flask(__name__)
 
     # Configurações de Segurança
-    secret_key = os.environ.get("SECRET_KEY", "dev-secret-key-change-in-production-123456789")
+    secret_key = os.environ.get("SECRET_KEY", "c89f2a945d8b7461c28fa1993478bf104ea29d779633e9b119283472")
     app.config["SECRET_KEY"] = secret_key
     app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(hours=4)
     app.config["SESSION_COOKIE_HTTPONLY"] = True
@@ -27,6 +27,15 @@ def create_app():
     app.register_blueprint(public_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(restricted_bp)
+
+    # Auto-inicialização segura das tabelas e usuários na inicialização do serviço
+    if os.environ.get("DATABASE_URL"):
+        try:
+            from app.init_db import init_database
+            init_database()
+            app.logger.info("Banco de dados verificado e inicializado com sucesso.")
+        except Exception as e:
+            app.logger.warning(f"Inicialização do banco em background pendente: {e}")
 
     # Headers de Segurança HTTP (OWASP Best Practices)
     @app.after_request

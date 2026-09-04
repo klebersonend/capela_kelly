@@ -22,7 +22,7 @@ def get_db_connection():
     if not db_url:
         raise ValueError("DATABASE_URL não configurada nas variáveis de ambiente.")
     
-    conn = psycopg2.connect(db_url, sslmode="require" if "render.com" in db_url else "prefer")
+    conn = psycopg2.connect(db_url)
     try:
         yield conn
     except Exception as e:
