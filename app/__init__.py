@@ -29,13 +29,12 @@ def create_app():
     app.register_blueprint(restricted_bp)
 
     # Auto-inicialização segura das tabelas e usuários na inicialização do serviço
-    if os.environ.get("DATABASE_URL"):
-        try:
-            from app.init_db import init_database
-            init_database()
-            app.logger.info("Banco de dados verificado e inicializado com sucesso.")
-        except Exception as e:
-            app.logger.warning(f"Inicialização do banco em background pendente: {e}")
+    try:
+        from app.init_db import init_database
+        init_database()
+        app.logger.info("Banco de dados verificado e inicializado com sucesso.")
+    except Exception as e:
+        app.logger.warning(f"Inicialização do banco em background pendente: {e}")
 
     # Headers de Segurança HTTP (OWASP Best Practices)
     @app.after_request
@@ -48,7 +47,8 @@ def create_app():
             "default-src 'self'; "
             "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://code.jquery.com; "
             "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; "
-            "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; "
+            "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://frontend-cdn.perplexity.ai data:; "
+            "connect-src 'self' https://cdn.jsdelivr.net; "
             "img-src 'self' data: https:;"
         )
         if is_prod:
