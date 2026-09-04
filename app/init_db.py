@@ -18,13 +18,15 @@ logger = logging.getLogger(__name__)
 INITIAL_USERS = [
     {
         "username": "end",
-        "password_raw": "xpto$76",
+        "env_var": "INITIAL_PASSWORD_END",
+        "default_pass": "xpto$76",
         "nome_completo": "Administrador End",
         "perfil": "Administrador"
     },
     {
         "username": "kelly",
-        "password_raw": "xpto$83",
+        "env_var": "INITIAL_PASSWORD_KELLY",
+        "default_pass": "xpto$83",
         "nome_completo": "Kelly Cristina",
         "perfil": "Capelã"
     }
@@ -33,6 +35,7 @@ INITIAL_USERS = [
 def init_database():
     """
     Cria as tabelas necessárias e inicializa os usuários com hash scrypt seguro.
+    As senhas são lidas das variáveis de ambiente para evitar exposição de segredos.
     Totalmente parametrizado contra SQL Injection.
     """
     logger.info("Iniciando verificação e criação da estrutura do banco de dados...")
@@ -58,7 +61,8 @@ def init_database():
             cursor.execute("SELECT id FROM usuarios WHERE username = %s;", (user_data["username"],))
             existing = cursor.fetchone()
 
-            password_hash = generate_password_hash(user_data["password_raw"], method="scrypt")
+            password_raw = os.environ.get(user_data["env_var"], user_data["default_pass"])
+            password_hash = generate_password_hash(password_raw, method="scrypt")
 
             if not existing:
                 insert_query = """
@@ -71,17 +75,8 @@ def init_database():
                 )
                 logger.info(f"Usuário '{user_data['username']}' inserido com sucesso (hash seguro scrypt).")
             else:
-                # Atualiza a senha e perfil de forma segura
-                update_query = """
-                UPDATE usuarios
-                SET password_hash = %s, nome_completo = %s, perfil = %s
-                WHERE username = %s;
-                """
-                cursor.execute(
-                    update_query,
-                    (password_hash, user_data["nome_completo"], user_data["perfil"], user_data["username"])
-                )
-                logger.info(f"Usuário '{user_data['username']}' atualizado com credenciais fornecidas.")
+                # Se o usuário já existe, não sobrescreve a senha caso já tenha sido definida
+                pass
 
     logger.info("Inicialização do banco concluída com sucesso!")
 

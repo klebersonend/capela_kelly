@@ -1,6 +1,8 @@
 import os
+import secrets
 from datetime import timedelta
 from flask import Flask
+from werkzeug.middleware.proxy_fix import ProxyFix
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -9,7 +11,8 @@ def create_app():
     app = Flask(__name__)
 
     # Configurações de Segurança
-    secret_key = os.environ.get("SECRET_KEY", "c89f2a945d8b7461c28fa1993478bf104ea29d779633e9b119283472")
+    # Se não houver SECRET_KEY nas envs, gera chave segura e aleatória
+    secret_key = os.environ.get("SECRET_KEY") or secrets.token_hex(32)
     app.config["SECRET_KEY"] = secret_key
     app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(hours=4)
     app.config["SESSION_COOKIE_HTTPONLY"] = True
@@ -18,6 +21,9 @@ def create_app():
     # Se em produção ou no Render, força cookies seguros HTTPS
     is_prod = os.environ.get("FLASK_ENV") == "production" or os.environ.get("RENDER") == "true" or os.environ.get("SESSION_COOKIE_SECURE", "false").lower() == "true"
     app.config["SESSION_COOKIE_SECURE"] = is_prod
+
+    # Suporte seguro a Proxy reverso (Render / Cloudflare) para resolução correta de IPs reais externos
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
     # Registro de Blueprints
     from app.blueprints.public.routes import public_bp

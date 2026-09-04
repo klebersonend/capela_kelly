@@ -8,3 +8,7 @@ ENV/
 .pytest_cache/
 .DS_Store
 *.log
+*.db
+*.sqlite
+*.sqlite3
+local_dev.db
