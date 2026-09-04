@@ -218,34 +218,79 @@ h1, h2, h3, h4, .brand-title {
 }
 
 .hero-cover-img-container {
-    height: 180px;
+    height: 200px;
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     position: relative;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none; /* Firefox */
+}
+
+.hero-cover-img-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .hero-cover-img {
     height: 100%;
-    width: 100%;
+    min-width: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.hero-card:hover .hero-cover-img {
-    transform: scale(1.03);
+@media (max-width: 768px) {
+    .hero-cover-img-container {
+        height: 190px;
+    }
+    .hero-cover-img {
+        min-width: 600px; /* Permite deslizar horizontalmente a foto panorâmica no celular */
+    }
+    .swipe-hint {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: rgba(15, 23, 42, 0.75);
+        color: #ffffff;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 20px;
+        pointer-events: none;
+        backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        z-index: 10;
+    }
 }
 
 .dashboard-banner {
-    height: 180px;
+    height: 200px;
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
     border: 1px solid var(--border-color);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.dashboard-banner::-webkit-scrollbar {
+    display: none;
 }
 
 .dashboard-banner-img {
     height: 100%;
-    width: 100%;
+    min-width: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .dashboard-banner-img {
+        min-width: 650px;
+    }
 }
 
 .avatar-img {

@@ -18,43 +18,43 @@ def dashboard():
     # Informações completas e profissionais sobre a atuação da Capelã Kelly Santana
     capela_profile = {
         "nome": "Kelly Santana",
-        "titulo": "Capelã & Especialista em Cuidado Integral e Acolhimento Humano",
+        "titulo": "Capelã Militar | Assistente da Coordenação Estadual (PMs de Cristo)",
         "linkedin": "https://www.linkedin.com/in/kelly-cristina-s-274b0488/",
-        "resumo": "Profissional dedicada à capelania com vasta experiência em suporte emocional, acolhimento em momentos de crise, escuta empática e assistência hospitalar/humanitária. Foco na restauração da dignidade humana, alívio do sofrimento psicológico/espiritual e fortalecimento de pacientes, famílias e equipes multidisciplinares.",
+        "resumo": "Assistente da Coordenação Estadual da Capelania na Associação PMs de Cristo e Capelã especializada em suporte emocional, espiritual e humano para as Forças de Segurança Pública (PMESP), famílias e ambiente hospitalar. Atuação destacada em gerenciamento de crises, elaboração de luto em ocorrências de alto impacto, escuta empática confidencial e formação com apoio de programas do CAES (Centro de Altos Estudos de Segurança).",
         "areas_atuacao": [
+            {
+                "titulo": "Capelania Militar & Policial",
+                "icone": "bi-shield-shaded",
+                "descricao": "Apoio humanitário, espiritual e preventivo aos policiais militares da ativa e veteranos da PMESP, além do acolhimento a seus familiares."
+            },
+            {
+                "titulo": "Gestão de Crises e Luto na Segurança",
+                "icone": "bi-heart-pulse",
+                "descricao": "Acompanhamento compassivo em ocorrências críticas, suporte aos batalhões e acolhimento direto às famílias enlutadas."
+            },
             {
                 "titulo": "Capelania Hospitalar",
                 "icone": "bi-hospital",
-                "descricao": "Visitas e acompanhamento de pacientes internados, suporte a familiares em UTIs, enfermarias e apoio a equipes de saúde sob estresse emocional."
+                "descricao": "Visitas a leitos, UTIs e enfermarias. Suporte a enfermos e suporte a equipes médicas sob estresse extremo."
             },
             {
-                "titulo": "Acolhimento ao Luto e Crises",
-                "icone": "bi-heart-pulse",
-                "descricao": "Intervenção compassiva em perdas repentinas, processos de luto e suporte durante notícias difíceis."
-            },
-            {
-                "titulo": "Escuta Ativa e Empática",
-                "icone": "bi-ear",
-                "descricao": "Atendimentos individuais confidenciais para alívio de angústia, solidão e suporte ao bem-estar emocional e espiritual."
-            },
-            {
-                "titulo": "Capelania Comunitária e Social",
-                "icone": "bi-people",
-                "descricao": "Ações solidárias, apoio a comunidades vulneráveis, rodas de conversa e suporte a grupos em momentos de vulnerabilidade social."
+                "titulo": "Escuta Ativa e Aconselhamento",
+                "icone": "bi-chat-heart",
+                "descricao": "Atendimento individual confidencial focado na saúde mental, restauração emocional e fortalecimento pessoal."
             }
         ],
         "principais_competencias": [
-            "Escuta Terapêutica e Empatia Avançada",
-            "Gestão de Crises e Apoio ao Luto",
-            "Ética e Confidencialidade Hospitalar",
-            "Comunicação Não-Violenta e Humanização",
-            "Suporte Espiritual Inter-religioso e Inclusivo",
-            "Integração com Equipes Multidisciplinares de Saúde"
+            "Assistência Estadual de Capelania (PMs de Cristo)",
+            "Suporte à Segurança Pública & PMESP",
+            "Gestão de Crises e Apoio ao Luto Crítico",
+            "Especialização em Gestão de Segurança Pública (CAES)",
+            "Ética, Sigilo Absoluto e Confidencialidade",
+            "Escuta Terapêutica e Comunicação Compassiva"
         ],
         "registros_recentes": [
-            {"data": "03/09/2026", "tipo": "Atendimento Hospitalar", "local": "Ala de Cuidados Intensivos", "status": "Concluído", "detalhe": "Acompanhamento e suporte emocional a familiar."},
-            {"data": "28/08/2026", "tipo": "Escuta Empática", "local": "Gabinete de Atendimento", "status": "Concluído", "detalhe": "Sessão de acolhimento e suporte em momento de transição."},
-            {"data": "20/08/2026", "tipo": "Roda de Conversa", "local": "Centro Comunitário", "status": "Concluído", "detalhe": "Mediação sobre saúde mental e acolhimento familiar."}
+            {"data": "03/09/2026", "tipo": "Capelania Militar", "local": "Batalhão PMESP / Encontro Regional", "status": "Concluído", "detalhe": "Alinhamento com a coordenação de capelania e acolhimento."},
+            {"data": "28/08/2026", "tipo": "Atendimento Hospitalar", "local": "Centro Hospitalar da PM (HPM)", "status": "Concluído", "detalhe": "Apoio e oração com familiar de policial internado."},
+            {"data": "20/08/2026", "tipo": "Escuta Confidencial", "local": "Gabinete PMs de Cristo", "status": "Concluído", "detalhe": "Sessão de acolhimento e suporte em momento de transição."}
         ]
     }
 
