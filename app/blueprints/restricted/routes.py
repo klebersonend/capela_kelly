@@ -20,17 +20,17 @@ def dashboard():
         "nome": "Kelly Santana",
         "titulo": "Capelã Militar | Assistente da Coordenação Estadual (PMs de Cristo)",
         "linkedin": "https://www.linkedin.com/in/kelly-cristina-s-274b0488/",
-        "resumo": "Assistente da Coordenação Estadual da Capelania na Associação PMs de Cristo e Capelã especializada em suporte emocional, espiritual e humano para as Forças de Segurança Pública (PMESP), famílias e ambiente hospitalar. Atuação destacada em gerenciamento de crises, elaboração de luto em ocorrências de alto impacto, escuta empática confidencial e formação com apoio de programas do CAES (Centro de Altos Estudos de Segurança).",
+        "resumo": "Assistente da Coordenação Estadual da Capelania na Associação PMs de Cristo e Capelã com formação em Capelania Militar. Especializada em suporte emocional, espiritual e acolhimento humano voltado a profissionais de segurança pública, suas famílias e ambiente hospitalar. Atuação destacada em gerenciamento de crises, elaboração de luto, escuta empática confidencial e formação com apoio de programas do CAES (Centro de Altos Estudos de Segurança).",
         "areas_atuacao": [
             {
-                "titulo": "Capelania Militar & Policial",
+                "titulo": "Capelania Militar",
                 "icone": "bi-shield-shaded",
-                "descricao": "Apoio humanitário, espiritual e preventivo aos policiais militares da ativa e veteranos da PMESP, além do acolhimento a seus familiares."
+                "descricao": "Atuação humanitária, espiritual e preventiva como capelã junto à Associação PMs de Cristo, apoiando integrantes da segurança pública e seus familiares."
             },
             {
-                "titulo": "Gestão de Crises e Luto na Segurança",
+                "titulo": "Gestão de Crises e Luto",
                 "icone": "bi-heart-pulse",
-                "descricao": "Acompanhamento compassivo em ocorrências críticas, suporte aos batalhões e acolhimento direto às famílias enlutadas."
+                "descricao": "Acompanhamento compassivo em situações críticas, suporte pós-trauma e acolhimento direto a famílias enlutadas."
             },
             {
                 "titulo": "Capelania Hospitalar",
