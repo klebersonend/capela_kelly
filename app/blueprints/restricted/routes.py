@@ -15,9 +15,9 @@ def login_required(f):
 @restricted_bp.route("/dashboard")
 @login_required
 def dashboard():
-    # Informações completas e profissionais sobre a atuação da Capelã Kelly Cristina
+    # Informações completas e profissionais sobre a atuação da Capelã Kelly Santana
     capela_profile = {
-        "nome": "Kelly Cristina",
+        "nome": "Kelly Santana",
         "titulo": "Capelã & Especialista em Cuidado Integral e Acolhimento Humano",
         "linkedin": "https://www.linkedin.com/in/kelly-cristina-s-274b0488/",
         "resumo": "Profissional dedicada à capelania com vasta experiência em suporte emocional, acolhimento em momentos de crise, escuta empática e assistência hospitalar/humanitária. Foco na restauração da dignidade humana, alívio do sofrimento psicológico/espiritual e fortalecimento de pacientes, famílias e equipes multidisciplinares.",

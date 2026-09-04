@@ -214,7 +214,55 @@ h1, h2, h3, h4, .brand-title {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
+
+.hero-cover-img-container {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-cover-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.hero-card:hover .hero-cover-img {
+    transform: scale(1.03);
+}
+
+.dashboard-banner {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.dashboard-banner-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.avatar-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.user-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* Footer */
 .footer-custom {

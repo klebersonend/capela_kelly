@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Kelly Cristina | Capelania & Acolhimento Humano{% endblock %}
+{% block title %}Kelly Santana | Capelania & Acolhimento Humano{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -27,26 +27,33 @@
                 </div>
             </div>
             <div class="col-lg-5 text-center">
-                <div class="hero-card shadow-lg p-4 bg-white rounded-4 border-0 position-relative">
-                    <div class="hero-icon-large mb-3 mx-auto">
-                        <i class="bi bi-heart-fill text-primary"></i>
+                <div class="hero-card shadow-lg bg-white rounded-4 border-0 position-relative overflow-hidden text-start">
+                    <div class="hero-cover-img-container">
+                        <img src="{{ url_for('static', filename='img/capa.jpg') }}" alt="Capa Capelania Kelly Santana" class="hero-cover-img" onerror="this.parentElement.style.display='none';">
                     </div>
-                    <h3 class="h4 fw-bold text-dark mb-2">Escuta Compassiva</h3>
-                    <p class="text-muted small mb-4">
-                        "O papel da capelania vai além das palavras; é estar presente no silêncio, acolher a dor com dignidade e levar esperança onde há incerteza."
-                    </p>
-                    <div class="stats-row row g-2 pt-3 border-top">
-                        <div class="col-4">
-                            <div class="fw-bold text-primary fs-4">+100%</div>
-                            <small class="text-muted text-uppercase" style="font-size: 0.72rem;">Dedicação</small>
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-1 fw-semibold">
+                                <i class="bi bi-heart-fill me-1"></i> Acolhimento Humano
+                            </span>
                         </div>
-                        <div class="col-4 border-start border-end">
-                            <div class="fw-bold text-primary fs-4">Ética</div>
-                            <small class="text-muted text-uppercase" style="font-size: 0.72rem;">Sigilo Total</small>
-                        </div>
-                        <div class="col-4">
-                            <div class="fw-bold text-primary fs-4">Humano</div>
-                            <small class="text-muted text-uppercase" style="font-size: 0.72rem;">Cuidado Pleno</small>
+                        <h3 class="h4 fw-bold text-dark mb-2">Escuta Compassiva</h3>
+                        <p class="text-muted small mb-4">
+                            "O papel da capelania vai além das palavras; é estar presente no silêncio, acolher a dor com dignidade e levar esperança onde há incerteza."
+                        </p>
+                        <div class="stats-row row g-2 pt-3 border-top text-center">
+                            <div class="col-4">
+                                <div class="fw-bold text-primary fs-4">+100%</div>
+                                <small class="text-muted text-uppercase" style="font-size: 0.72rem;">Dedicação</small>
+                            </div>
+                            <div class="col-4 border-start border-end">
+                                <div class="fw-bold text-primary fs-4">Ética</div>
+                                <small class="text-muted text-uppercase" style="font-size: 0.72rem;">Sigilo Total</small>
+                            </div>
+                            <div class="col-4">
+                                <div class="fw-bold text-primary fs-4">Humano</div>
+                                <small class="text-muted text-uppercase" style="font-size: 0.72rem;">Cuidado Pleno</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,16 +123,17 @@
     </div>
 </section>
 
-<!-- Sobre Kelly Cristina -->
+<!-- Sobre Kelly Santana -->
 <section id="sobre" class="section-padding bg-white">
     <div class="container py-5">
         <div class="row align-items-center gy-5">
             <div class="col-lg-5 text-center">
                 <div class="about-avatar-box mx-auto shadow-sm p-4 rounded-4 bg-light border">
                     <div class="avatar-placeholder mb-3">
-                        <i class="bi bi-person-heart display-1 text-primary"></i>
+                        <img src="{{ url_for('static', filename='img/kelly_perfil.jpg') }}" alt="Kelly Santana" class="avatar-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback-icon').style.display='block';">
+                        <i id="avatar-fallback-icon" class="bi bi-person-heart display-1 text-primary" style="display: none;"></i>
                     </div>
-                    <h3 class="h4 fw-bold text-dark mb-1">Kelly Cristina</h3>
+                    <h3 class="h4 fw-bold text-dark mb-1">Kelly Santana</h3>
                     <p class="text-primary fw-medium mb-3">Capelã & Orientadora de Cuidado Integral</p>
                     <a href="https://www.linkedin.com/in/kelly-cristina-s-274b0488/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill px-4">
                         <i class="bi bi-linkedin me-2"></i> Ver Perfil Completo
@@ -136,7 +144,7 @@
                 <span class="text-primary fw-semibold text-uppercase tracking-wider">Vocação e Compromisso</span>
                 <h2 class="display-6 fw-bold mt-2 mb-4 text-dark">Dedicada a transformar dor em resiliência e acolhimento.</h2>
                 <p class="text-secondary mb-3">
-                    Com sólida vocação humanitária e formação contínua em capelania, <strong>Kelly Cristina</strong> desenvolve seu trabalho fundamentada em pilares de respeito incondicional, compaixão e ética.
+                    Com sólida vocação humanitária e formação contínua em capelania, <strong>Kelly Santana</strong> desenvolve seu trabalho fundamentada em pilares de respeito incondicional, compaixão e ética.
                 </p>
                 <p class="text-secondary mb-4">
                     Sua abordagem respeita as individualidades, crenças e necessidades de cada pessoa, promovendo um ambiente de serenidade mesmo nas circunstâncias mais desafiadoras do ambiente hospitalar e comunitário.

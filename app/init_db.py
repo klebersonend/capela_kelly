@@ -27,7 +27,7 @@ INITIAL_USERS = [
         "username": "kelly",
         "env_var": "INITIAL_PASSWORD_KELLY",
         "default_pass": "xpto$83",
-        "nome_completo": "Kelly Cristina",
+        "nome_completo": "Kelly Santana",
         "perfil": "Capelã"
     }
 ]

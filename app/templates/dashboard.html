@@ -1,17 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}Painel Restrito | Kelly Cristina - Capelania{% endblock %}
+{% block title %}Painel Restrito | Kelly Santana - Capelania{% endblock %}
 
 {% block content %}
 <div class="dashboard-wrapper py-5 bg-light min-vh-100">
     <div class="container">
+        <!-- Cover Banner -->
+        <div class="dashboard-banner mb-4 rounded-4 overflow-hidden shadow-sm">
+            <img src="{{ url_for('static', filename='img/capa.jpg') }}" alt="Capa Capelania Kelly Santana" class="dashboard-banner-img" onerror="this.parentElement.style.display='none';">
+        </div>
+
         <!-- Top Bar / Welcome -->
         <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white">
             <div class="row align-items-center gy-3">
                 <div class="col-md-8">
                     <div class="d-flex align-items-center gap-3">
                         <div class="user-avatar-circle">
-                            <i class="bi bi-person-fill text-primary fs-2"></i>
+                            <img src="{{ url_for('static', filename='img/kelly_perfil.jpg') }}" alt="Kelly Santana" class="user-avatar-img" onerror="this.style.display='none'; document.getElementById('dash-avatar-icon').style.display='block';">
+                            <i id="dash-avatar-icon" class="bi bi-person-fill text-primary fs-2" style="display: none;"></i>
                         </div>
                         <div>
                             <div class="d-flex align-items-center gap-2">

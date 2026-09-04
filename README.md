@@ -1,6 +1,6 @@
 # Capela Kelly - Portal de Capelania & Acolhimento Humano
 
-Aplicação web moderna, segura e com tema claro dedicada ao trabalho de Capelania da Kelly Cristina.
+Aplicação web moderna, segura e com tema claro dedicada ao trabalho de Capelania da Kelly Santana.
 
 ## Tecnologias
 - **Backend:** Python 3 + Flask (Blueprints, Jinja2, Werkzeug)
